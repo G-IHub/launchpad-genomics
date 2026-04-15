@@ -198,8 +198,6 @@ section { padding: 5.5rem 2.5rem; }
   font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
   color: var(--ink); margin-bottom: 1.4rem;
 }
-.section-desc { font-size: 0.9rem; color: #5a6b65; max-width: 560px; line-height: 1.75; margin-bottom: 0; }
-.section-desc-light { font-size: 0.88rem; color: rgba(245,242,235,0.7); max-width: 650px; line-height: 1.75; margin-bottom: 2rem; }
 
 /* ── PROBLEM ── */
 .problem-section { background: var(--purple-deep); color: var(--paper); }
@@ -232,7 +230,7 @@ section { padding: 5.5rem 2.5rem; }
 
 /* ── TRACKS ── */
 .tracks-section { background: var(--paper2); }
-.tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1rem; margin-top: 2.5rem; }
+.tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; margin-top: 2.5rem; }
 .track-card {
   background: var(--white); border: 1px solid rgba(10,15,13,0.08);
   border-radius: 12px; padding: 1.6rem;
@@ -265,7 +263,7 @@ section { padding: 5.5rem 2.5rem; }
 .earnings-section { background: var(--purple-deep); color: var(--paper); }
 .earnings-section .section-title { color: var(--paper); }
 .earnings-section .section-label { color: var(--ylgreen); }
-.earnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 1.5px; background: rgba(255,255,255,0.07); margin-top: 2.5rem; }
+.earnings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5px; background: rgba(255,255,255,0.07); margin-top: 2.5rem; }
 .earning-card { background: var(--purple-card); padding: 1.75rem; }
 .earning-layer { font-family: var(--mono); font-size: 0.65rem; color: rgba(245,242,235,0.45); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.7rem; }
 .earning-role { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--ylgreen); margin-bottom: 0.5rem; line-height: 1.3; }
@@ -294,10 +292,6 @@ section { padding: 5.5rem 2.5rem; }
 .apply-section .section-label { color: rgba(255,255,255,0.6); }
 .apply-section .section-title { color: #fff; }
 .apply-intro { font-size: 0.95rem; color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.75; }
-.apply-form-container {
-  background: #fff; border-radius: 12px; padding: 2.5rem; text-align: left;
-  color: var(--ink); max-width: 680px; margin: 3rem auto 0; box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-}
 .btn-apply {
   display: inline-block;
   font-family: var(--display); font-weight: 700; font-size: 1.05rem;
@@ -422,7 +416,7 @@ footer { background: var(--purple-deep); color: rgba(245,242,235,0.5); padding: 
 
   .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
 
-  .apply-form-container { padding: 1.5rem; margin-top: 2rem; }
+  .apply-form { padding: 1.4rem; border-radius: 12px; }
   .form-grid { grid-template-columns: 1fr; gap: 0; }
 
   .tl-item { gap: 1.2rem; }
@@ -578,8 +572,8 @@ footer { background: var(--purple-deep); color: rgba(245,242,235,0.5); padding: 
   <div class="section-inner reveal">
     <p class="section-label">Specialisation tracks</p>
     <h2 class="section-title">Two tracks. One program.</h2>
-    <p class="section-desc">By Week 3, you are placed into the track that best matches your strengths and the type of contract work you will deliver.</p>
-    <div class="tracks-grid">
+    <p style="color:#5a6b65; max-width:560px; margin-bottom:0; font-size:0.9rem; line-height:1.75;">By Week 3, you are placed into the track that best matches your strengths and the type of contract work you will deliver.</p>
+    <div class="tracks-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
       <div class="track-card">
         <p class="track-num">Track 01</p>
         <p class="track-name">Bioinformatics Analysis</p>
@@ -634,8 +628,8 @@ footer { background: var(--purple-deep); color: rgba(245,242,235,0.5); padding: 
   <div class="section-inner reveal">
     <p class="section-label">What top performers earn</p>
     <h2 class="section-title">Real paid contract roles. $30 – $300 per contract.</h2>
-    <p class="section-desc-light">Top performers from Cycle 001 are selected for real paid contracts across these roles through OmicsPath. These are not simulated tasks — they are verified work placements with real deliverables.</p>
-    <div class="earnings-grid">
+    <p style="color:rgba(245,242,235,0.7);max-width:580px;font-size:0.88rem;line-height:1.75;margin-bottom:2rem;">Top performers from Cycle 001 are selected for real paid contracts across these roles through OmicsPath. These are not simulated tasks — they are verified work placements with real deliverables.</p>
+    <div class="earnings-grid" style="grid-template-columns:repeat(auto-fit,minmax(210px,1fr));">
       <div class="earning-card">
         <p class="earning-layer">Analysis Track</p>
         <p class="earning-role">Bioinformatics Analyst</p>
@@ -745,60 +739,11 @@ footer { background: var(--purple-deep); color: rgba(245,242,235,0.5); padding: 
 <section class="apply-section" id="apply">
   <div class="section-inner">
     <p class="section-label">Apply for Cycle 001</p>
-    <h2 class="section-title">Your entry into Africa's genomics talent economy.</h2>
+    <h2 class="section-title">Your entry into genomics talent economy.</h2>
     <p class="apply-intro">Applications are reviewed manually. We accept only candidates with a biology or research background. Spots are limited and filled on a first-come, qualified basis.</p>
-    
-    <div class="apply-form-container">
-      <div class="form-price-banner">
-        <div>
-          <span class="price-label">Cycle 001 Registration</span>
-        </div>
-        <div style="text-align:right;">
-          <span class="price-amount">$65</span>
-          <div class="price-note">One-time payment. No hidden fees.</div>
-        </div>
-      </div>
-      
-      <form action="#" method="POST" class="apply-form">
-        <div class="form-grid">
-          <div class="form-row">
-            <label class="form-label">First Name <span class="form-required">*</span></label>
-            <input type="text" class="form-input" required placeholder="Jane">
-          </div>
-          <div class="form-row">
-            <label class="form-label">Last Name <span class="form-required">*</span></label>
-            <input type="text" class="form-input" required placeholder="Doe">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label class="form-label">Email Address <span class="form-required">*</span></label>
-          <input type="email" class="form-input" required placeholder="jane@example.com">
-        </div>
-
-        <div class="form-row">
-          <label class="form-label">Primary Background <span class="form-required">*</span></label>
-          <select class="form-select" required>
-            <option value="" disabled selected>Select your domain</option>
-            <option value="microbiology">Microbiology</option>
-            <option value="biochemistry">Biochemistry</option>
-            <option value="genetics">Genetics / Molecular Biology</option>
-            <option value="medlab">Medical Lab Science</option>
-            <option value="other">Other Life Sciences</option>
-          </select>
-        </div>
-
-        <div class="form-divider"></div>
-
-        <div class="form-row">
-          <label class="form-label">Why are you applying for Cycle 001? <span class="form-required">*</span></label>
-          <textarea class="form-textarea" required placeholder="Briefly describe what you hope to achieve..."></textarea>
-          <p class="form-note">Used to filter applicants for commitment and alignment.</p>
-        </div>
-
-        <button type="submit" class="form-submit">Submit Application →</button>
-        <p class="form-legal">By applying, you agree to our terms and acknowledge the selection process.</p>
-      </form>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:2rem;">
+      <a href="#" class="btn-apply">Apply Now</a>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.55);font-family:var(--mono);letter-spacing:0.04em;">You will be redirected to the application form on the Genomac Institute website.</p>
     </div>
   </div>
 </section>
